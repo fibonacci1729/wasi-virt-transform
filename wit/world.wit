@@ -1,0 +1,12 @@
+package virt:wasi;
+
+world transformer {
+    record options {
+        environment: list<tuple<string, string>>,
+    }
+
+    export transform: func(
+        component: list<u8>,
+        options: options,
+    ) -> result<list<u8>, string>;
+}
